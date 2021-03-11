@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const SectionStyling = styled.div`
+const StyledSection = styled.div`
   background-color: #ffffff;
   border: solid 3px grey;
   margin: 4px;
@@ -14,7 +14,7 @@ const SectionStyling = styled.div`
   color: #ff6961;
 `;
 
-const WeekdayTitleStyling = styled.div`
+const StyledWeekdayTitle = styled.div`
   display: flex;
   justify-content: center;
   width: 50px;
@@ -22,11 +22,10 @@ const WeekdayTitleStyling = styled.div`
 `;
 
 function WeekdayTitle({ day }) {
-  console.log("calling WeekdayTitle");
   return (
-    <SectionStyling>
-      <WeekdayTitleStyling>{day}</WeekdayTitleStyling>
-    </SectionStyling>
+    <StyledSection>
+      <StyledWeekdayTitle>{day}</StyledWeekdayTitle>
+    </StyledSection>
   );
 }
 

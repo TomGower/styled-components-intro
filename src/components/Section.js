@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const SectionStyled = styled.div`
+const StyledSection = styled.div`
   background-color: #ffffff;
   border: solid 3px grey;
   margin: 4px;
@@ -15,7 +15,7 @@ const SectionStyled = styled.div`
 `;
 
 function Section(children) {
-  return <SectionStyled>{children}</SectionStyled>;
+  return <StyledSection>{children}</StyledSection>;
 }
 
 export default Section;
