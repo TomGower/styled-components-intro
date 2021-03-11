@@ -25,6 +25,9 @@
     "url": "https://github.com/TomGower/styled-components-intro/issues"
   },
   "homepage": "https://github.com/TomGower/styled-components-intro#readme",
+  "resolutions": {
+    "styled-components": "^5"
+  },
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
@@ -38,6 +41,7 @@
   },
   "dependencies": {
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
   }
 }
