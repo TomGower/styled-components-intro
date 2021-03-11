@@ -1,6 +1,6 @@
 import React from "react";
-import ProjectTitle from "./ProjectTitle";
-import WeekdayTitle from "./WeekdayTitle";
+import ProjectTitle from "./components/ProjectTitle";
+import WeekdayTitle from "./components/WeekdayTitle";
 
 const days = ["M", "Tu", "W", "Th", "F", "Sa", "Su"];
 
