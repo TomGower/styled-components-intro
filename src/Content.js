@@ -9,6 +9,7 @@ const TitleStyling = styled.h1`
 const SectionStyling = styled.div`
   background-color: #f0d1aa;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   color: #f0aeaa;
   border-radius: 15px;
@@ -19,6 +20,8 @@ const Content = () => {
     <>
       <SectionStyling>
         <TitleStyling>💅 Section</TitleStyling>
+        <Button />
+        <Button />
       </SectionStyling>
     </>
   );
