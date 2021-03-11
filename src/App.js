@@ -1,11 +1,16 @@
 import React from "react";
-import Content from "./Content";
+import ProjectTitle from "./ProjectTitle";
+import WeekdayTitle from "./WeekdayTitle";
+
+const days = ["M", "Tu", "W", "Th", "F", "Sa", "Su"];
 
 const App = () => {
   return (
     <div>
-      <h1>Hello World</h1>
-      <Content />
+      <ProjectTitle />
+      {days.map((day) => (
+        <WeekdayTitle day={day} key={day} />
+      ))}
     </div>
   );
 };
