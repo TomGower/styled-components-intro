@@ -7,10 +7,12 @@ const StyledIcon = styled.div`
   width: 30px;
   border-radius: 15px;
   margin: 5px;
+  border-color: blue;
+  border: ${({ border }) => border || "3px solid blue"};
 `;
 
-function Icon({ primary }) {
-  return <StyledIcon primary={primary} />;
+function Icon({ primary, border }) {
+  return <StyledIcon primary={primary} border={border} />;
 }
 
 export default Icon;

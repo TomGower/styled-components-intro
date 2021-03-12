@@ -36,7 +36,7 @@ const Content = () => {
         <Subtitle>I am a subtitle</Subtitle>
         <Button primary text={"Click me!"} />
         <Button text={"Click me too!"} />
-        <Icon primary />
+        <Icon primary border="solid 3px black" />
         <Icon />
         <ParagraphTitle as={ReversedTitle}>
           Demonstration of Mini-Challenge
