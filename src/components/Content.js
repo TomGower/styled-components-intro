@@ -3,11 +3,20 @@ import styled from "styled-components";
 import Button from "./Button";
 import Icon from "./Icon";
 
-const StyledTitle = styled.h1`
+const Title = styled.h1`
   color: #aac9f0;
 `;
 
-const StyledSection = styled.div`
+const Subtitle = styled(Title)`
+  font-size: 12px;
+  align-self: center;
+`;
+
+const ParagraphTitle = styled(Subtitle)`
+  color: grey;
+`;
+
+const Section = styled.div`
   background-color: #f0d1aa;
   display: flex;
   flex-direction: column;
@@ -19,13 +28,15 @@ const StyledSection = styled.div`
 const Content = () => {
   return (
     <>
-      <StyledSection>
-        <StyledTitle>💅 Section</StyledTitle>
+      <Section>
+        <Title>💅 Section</Title>
+        <Subtitle>I am a subtitle</Subtitle>
         <Button primary text={"Click me!"} />
         <Button text={"Click me too!"} />
         <Icon primary />
         <Icon />
-      </StyledSection>
+        <ParagraphTitle>Demonstration of Mini-Challenge</ParagraphTitle>
+      </Section>
     </>
   );
 };
