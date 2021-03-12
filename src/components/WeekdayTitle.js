@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import ProgressBar from "./ProgressBar";
 
 const StyledSection = styled.div`
   background-color: #ffffff;
@@ -14,27 +15,28 @@ const StyledSection = styled.div`
   color: #ff6961;
 `;
 
-const StyledWeekendTitle = styled.div`
+const StyledWeekdayTitle = styled.div`
   display: flex;
   justify-content: center;
-  width: 50px;
+  min-width: 50px;
   border-right: solid 3px lightgrey;
 `;
 
-const WeekendTitle = styled(StyledWeekendTitle)`
+const WeekendTitle = styled(StyledWeekdayTitle)`
   color: green;
   background-color: lightgrey;
   border-radius: 7px 0 0 7px;
 `;
 
-function WeekdayTitle({ day }) {
+function WeekdayTitle({ date, progress }) {
   return (
     <StyledSection>
-      {day && day[0] === "S" ? (
-        <WeekendTitle>{day}</WeekendTitle>
+      {date && date[0] === "S" ? (
+        <WeekendTitle>{date}</WeekendTitle>
       ) : (
-        <StyledWeekendTitle>{day}</StyledWeekendTitle>
+        <StyledWeekdayTitle>{date}</StyledWeekdayTitle>
       )}
+      <ProgressBar progress={progress} />
     </StyledSection>
   );
 }
