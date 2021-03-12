@@ -3,8 +3,16 @@ import styled from "styled-components";
 import Button from "./Button";
 import Icon from "./Icon";
 
+const Section = styled.div`
+  background-color: #aac9f0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 15px;
+`;
+
 const Title = styled.h1`
-  color: #aac9f0;
+  color: #aaecf0;
 `;
 
 const Subtitle = styled(Title)`
@@ -16,14 +24,9 @@ const ParagraphTitle = styled(Subtitle)`
   color: grey;
 `;
 
-const Section = styled.div`
-  background-color: #f0d1aa;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #f0aeaa;
-  border-radius: 15px;
-`;
+const ReversedTitle = (props) => (
+  <ParagraphTitle {...props} children={props.children.split("").reverse()} />
+);
 
 const Content = () => {
   return (
@@ -35,7 +38,9 @@ const Content = () => {
         <Button text={"Click me too!"} />
         <Icon primary />
         <Icon />
-        <ParagraphTitle>Demonstration of Mini-Challenge</ParagraphTitle>
+        <ParagraphTitle as={ReversedTitle}>
+          Demonstration of Mini-Challenge
+        </ParagraphTitle>
       </Section>
     </>
   );
