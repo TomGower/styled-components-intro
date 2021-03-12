@@ -20,6 +20,9 @@ const StyledWeekdayTitle = styled.div`
   justify-content: center;
   min-width: 50px;
   border-right: solid 3px lightgrey;
+  color: ${({ isToday }) => {
+    if (isToday) return "blue";
+  }};
 `;
 
 const WeekendTitle = styled(StyledWeekdayTitle)`
@@ -28,15 +31,16 @@ const WeekendTitle = styled(StyledWeekdayTitle)`
   border-radius: 7px 0 0 7px;
 `;
 
-function WeekdayTitle({ date, progress }) {
+function WeekdayTitle({ date, progress, id }) {
+  const isToday = new Date().getDay() === id % 7;
   return (
     <StyledSection>
       {date && date[0] === "S" ? (
-        <WeekendTitle>{date}</WeekendTitle>
+        <WeekendTitle isToday={isToday}>{date}</WeekendTitle>
       ) : (
-        <StyledWeekdayTitle>{date}</StyledWeekdayTitle>
+        <StyledWeekdayTitle isToday={isToday}>{date}</StyledWeekdayTitle>
       )}
-      <ProgressBar progress={progress} />
+      <ProgressBar progress={progress} isToday={isToday} />
     </StyledSection>
   );
 }

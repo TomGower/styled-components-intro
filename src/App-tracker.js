@@ -17,7 +17,7 @@ const App = () => {
     <div>
       <ProjectTitle />
       {days.map(({ date, progress, id }) => (
-        <WeekdayTitle date={date} progress={progress} key={id} />
+        <WeekdayTitle date={date} progress={progress} id={id} key={id} />
       ))}
     </div>
   );

@@ -13,14 +13,19 @@ const StyledProgressBar = styled.div`
   width: ${({ progress }) => (progress ? `${progress}%` : "0%")};
 `;
 
+const TodayProgressBar = styled(StyledProgressBar)`
+  background-color: purple;
+`;
+
 const StyledProgressSection = styled.div`
   width: 250px;
 `;
 
-function ProgressBar({ progress }) {
+function ProgressBar({ progress, isToday }) {
   return (
     <StyledProgressSection>
-      <StyledProgressBar progress={progress} />
+      {isToday && <TodayProgressBar progress={progress} />}
+      {!isToday && <StyledProgressBar progress={progress} />}
     </StyledProgressSection>
   );
 }
