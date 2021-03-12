@@ -19,6 +19,10 @@ const StyledIcon = styled.div`
     if (status === "done") return "140px";
     return "5px";
   }};
+
+  &:hover {
+    background-color: gray;
+  }
 `;
 
 function Icon({ statusColor, border, status }) {
