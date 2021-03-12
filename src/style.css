@@ -1,3 +1,4 @@
+/* content */
 /* body {
   background-color: #aaf0d1;
   display: flex;
@@ -5,6 +6,8 @@
   color: #d1aaf0;
   font-family: sans-serif;
 } */
+
+/* tracker */
 body {
   background-color: #ccddee;
   display: flex;
@@ -12,11 +15,3 @@ body {
   text-align: center;
   font-family: sans-serif;
 }
-
-/* .section {
-  background-color: #f0d1aa;
-  display: flex;
-  justify-content: center;
-  color: #f0aeaa;
-  border-radius: 15px;
-} */
