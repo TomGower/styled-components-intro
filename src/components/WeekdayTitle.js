@@ -14,17 +14,27 @@ const StyledSection = styled.div`
   color: #ff6961;
 `;
 
-const StyledWeekdayTitle = styled.div`
+const StyledWeekendTitle = styled.div`
   display: flex;
   justify-content: center;
   width: 50px;
   border-right: solid 3px lightgrey;
 `;
 
+const WeekendTitle = styled(StyledWeekendTitle)`
+  color: green;
+  background-color: lightgrey;
+  border-radius: 7px 0 0 7px;
+`;
+
 function WeekdayTitle({ day }) {
   return (
     <StyledSection>
-      <StyledWeekdayTitle>{day}</StyledWeekdayTitle>
+      {day && day[0] === "S" ? (
+        <WeekendTitle>{day}</WeekendTitle>
+      ) : (
+        <StyledWeekendTitle>{day}</StyledWeekendTitle>
+      )}
     </StyledSection>
   );
 }
