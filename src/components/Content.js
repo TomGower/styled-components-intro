@@ -36,8 +36,8 @@ const Content = () => {
         <Subtitle>I am a subtitle</Subtitle>
         <Button primary text={"Click me!"} />
         <Button text={"Click me too!"} />
-        <Icon primary border="solid 3px black" />
-        <Icon />
+        <Icon border="solid 3px black" statusColor={"steady"} />
+        <Icon status={"in-progress"} />
         <ParagraphTitle as={ReversedTitle}>
           Demonstration of Mini-Challenge
         </ParagraphTitle>
